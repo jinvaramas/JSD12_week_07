@@ -74,8 +74,8 @@ function updateUI() {
   var cost = getMachineCost();
 
   countEl.textContent   = Math.floor(popcorn) + ' 🍿';
-  cpsEl.textContent     = '⚡ ' + cps.toFixed(1) + ' /วิ';
-  cpcEl.textContent     = '👆 ' + cpc + ' /คลิก';
+  cpsEl.textContent     = '⚡ ' + cps.toFixed(1) + ' /sec';
+  cpcEl.textContent     = '👆 ' + cpc + ' /click';
   buyCostEl.textContent = cost + ' 🍿';
 
   buyBtn.disabled = popcorn < cost;
