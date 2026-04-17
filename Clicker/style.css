@@ -1,0 +1,64 @@
+body {
+  background-color: #1a0d02;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 30px;
+}
+
+#count { font-size: 2rem; color: gold; }
+
+#popcorn-btn {
+  font-size: 80px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+#popcorn-btn:active { transform: scale(0.88); }
+
+.shop { margin-top: 24px; }
+
+#buy-btn {
+  padding: 10px 20px;
+  background: #f5a623;
+  color: #1a0d02;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+#buy-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.upgrade-card {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(245,166,35,0.3);
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 8px auto;
+  max-width: 360px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.upgrade-card:hover { background: rgba(245,166,35,0.15); }
+.upgrade-card.owned {
+  border-color: #27ae60;
+  opacity: 0.6;
+  cursor: default;
+}
+
+.pop-particle {
+  position: fixed;
+  font-size: 1.4rem;
+  pointer-events: none;
+  animation: pop-fly 0.8s ease-out forwards;
+  z-index: 999;
+}
+
+@keyframes pop-fly {
+  0%   { transform: translate(0, 0) scale(1);   opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(0.4); opacity: 0; }
+}
